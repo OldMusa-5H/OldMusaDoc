@@ -9,11 +9,18 @@ Obtain a login token
 ### Request
 
 **URL**: `/token`  
-**HTTP method**: GET  
+**HTTP method**: POST | GET
 
 ```sh
-curl -X GET \
-     ${API_URL}/token?username=root&password=password
+data='{
+    "username": "root",
+    "password": "password"
+}';
+
+curl -X POST \
+     -H "Content-Type: application/json" \
+     -d "$data" \
+     ${API_URL}/token
 ```
 
 ### Attributes
