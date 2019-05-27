@@ -604,7 +604,7 @@ Admin
 **HTTP method**: DELETE
 
 ```sh
-curl -X PUT \
+curl -X DELETE \
      -H "Token: $TOKEN" \
      "${API_URL}/site/22/map"
 ```
